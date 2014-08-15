@@ -29,7 +29,7 @@ namespace TestPerfCounter
             string wmiQueryResult = wc.MakeQuery(this.query)[0];
 
             bool healthy = int.Parse(wmiQueryResult) <= maxValue;
-            Brush color = healthy ? Brushes.LimeGreen : Brushes.OrangeRed;
+            Brush color = healthy ? Brushes.LimeGreen : Brushes.DarkRed;
 
             this.label.Dispatcher.BeginInvoke((Action)(() =>
             {
